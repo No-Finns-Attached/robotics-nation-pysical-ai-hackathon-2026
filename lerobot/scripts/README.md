@@ -55,6 +55,20 @@ lerobot-teleoperate \
   --teleop.id=my_so101_leader
 ```
 
+## 5) Command to start recording
+
+repo_id is your huggingface repository id.
+
+```bash
+lerobot-record   --robot.type=so101_follower   --robot.port=/dev/ttyACM0   --robot. id=my_so101_follower   --robot.cameras="{wrist: {type: opencv, index_or_path: '/dev/video2', width: 640, height: 480, fps: 30}, external: {type: opencv, index_or_path: '/dev/video0', width: 640, height: 480, fps: 30}}"   --teleop.type=so101_leader   --teleop.port=/dev/ttyACM1   --teleop.id=my_so101_leader   --display_data=true   --dataset.repo_id=pauliusrag/test1_so101   --dataset.single_task="test1"   --dataset.num_episodes=5   --dataset.episode_time_s=30   --dataset.reset_time_s=10
+```
+
+Camera ports can be tested with this:
+
+```bash
+v4l2-ctl --list-devices
+```
+
 ---
 
 ## Custom Python Scripts (quick overview)
