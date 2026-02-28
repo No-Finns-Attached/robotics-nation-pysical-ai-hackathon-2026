@@ -2,7 +2,7 @@ import time
 
 from lerobot.robots.so_follower import SO101FollowerConfig, SO101Follower
 
-PORT = "/dev/tty.usbmodem5A460858781"
+PORT = "/dev/tty.usbmodem5AAF2628661"
 ROBOT_ID = "my_so101_follower"
 
 config = SO101FollowerConfig(
