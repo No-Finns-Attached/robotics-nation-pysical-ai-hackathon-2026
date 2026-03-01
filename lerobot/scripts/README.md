@@ -75,6 +75,31 @@ You can also use:
 v4l2-ctl --list-devices
 ```
 
+## 6) Start lerobot server
+
+```bash
+python -m lerobot.async_inference.policy_server --host=127.0.0.1 --port=8080
+```
+
+## 7) Run trained model
+
+```bash
+python -m lerobot.async_inference.robot_client \
+  --server_address=xxx.xxxx.xx.xxx:xxxx \
+  --robot.type=so101_follower \
+  --robot.port=/dev/follower_right \
+  --robot.id=follower_so101 \
+  --robot.cameras="{wrist: {type: opencv, index_or_path: \"/dev/cam_wrist_right\", width: 640, height: 480, fps: 30}, external: {type: opencv, index_or_path: \"/dev/cam_overview\", width: 640, height: 480, fps: 30}}" \
+  --task="dummy" \
+  --policy_type=act \
+  --pretrained_name_or_path=kugelblytz/test_right7_so101_act_20000steps_bs4_14000 \
+  --policy_device=cuda \
+  --actions_per_chunk=90 \
+  --chunk_size_threshold=0.2 \
+  --aggregate_fn_name=latest_only \
+  --debug_visualize_queue_size=True
+```
+
 ---
 
 ## Custom Python Scripts (quick overview)
@@ -102,6 +127,8 @@ v4l2-ctl --list-devices
 4. Use `starting_pos.py --record` to save your preferred startup pose.
 
 ## Notes
+
+Use Macbook, Linux sucks. Don't forget to use Codex :)
 
 - Keep `ROBOT_ID` consistent with the ID used during calibration.
 - Update `PORT` values inside scripts if they differ from your machine.
