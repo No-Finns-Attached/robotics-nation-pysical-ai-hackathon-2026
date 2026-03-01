@@ -23,14 +23,14 @@ We secured **first place** at the hackathon out of 50+ participants 🚀
 ### Task 1 — Fill Cup Together
 One arm brings the cup to the tap while the other arm turns the tap on to fill it.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NVHb-mLm7kE" title="Task 1 Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Task 1 Demo](https://img.youtube.com/vi/NVHb-mLm7kE/hqdefault.jpg)](https://youtu.be/NVHb-mLm7kE)
 
 Direct link: https://youtu.be/NVHb-mLm7kE
 
 ### Task 2 — Place Object into Cup Together
 One arm brings the cup while the other arm drops an item in (e.g. vitamins).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xINkiETv5cA" title="Task 2 Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Task 2 Demo](https://img.youtube.com/vi/xINkiETv5cA/hqdefault.jpg)](https://youtu.be/xINkiETv5cA)
 
 Direct link: https://youtu.be/xINkiETv5cA
 
@@ -72,7 +72,7 @@ We used Rerun.io to inspect and monitor robot/environment data during collection
 
 ```bash
 python -m lerobot.async_inference.robot_client \
-	--server_address=95.133.253.67:8080 \
+	--server_address=<SERVER_IP>:<SERVER_PORT> \
 	--robot.type=bi_so_follower \
 	--robot.id=my_bi_so101_follower \
 	--robot.left_arm_config.port=/dev/tty.usbmodem5AAF2628661 \
@@ -93,7 +93,7 @@ python -m lerobot.async_inference.robot_client \
 
 ```bash
 python -m lerobot.async_inference.robot_client \
-	--server_address=95.133.253.67:8080 \
+	--server_address=<SERVER_IP>:<SERVER_PORT> \
 	--robot.type=bi_so_follower \
 	--robot.id=my_bi_so101_follower \
 	--robot.left_arm_config.port=/dev/tty.usbmodem5AAF2628661 \
