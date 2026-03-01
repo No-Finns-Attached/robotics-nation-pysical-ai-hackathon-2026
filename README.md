@@ -125,7 +125,7 @@ python -m lerobot.async_inference.robot_client \
 
 ## Reflection
 
-This was a great learning experience for the whole team across robotics hardware, data collection, policy training, and deployment.
+This was a great learning experience for the whole team across robotics hardware, data collection, policy training, and deployment. We had to face challenges with hardware setup (rebuilding the robot arms and calibrating from scratch), data collection and model training. We also gained valuable insight into good team work practices and collaborating under heavy time constraints. 
 
 ---
 
