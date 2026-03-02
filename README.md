@@ -127,7 +127,7 @@ python -m lerobot.async_inference.robot_client \
 
 Using imitation learning with ACT allowed us to get the robot working quickly, which was ideal given the time constraints of the competition. However, the system is not yet fully reliable. We observed that increasing the number of training episodes did not consistently improve performance. In some cases, the model became overly dependent on specific conditions such as camera angle, lighting, or initial pose, which limited generalization.
 
-To maintain stability and simplicity, each model was trained to perform a single subtask. While this makes development and debugging easier, it does not scale well to longer or more complex task sequences. A more robust solution would include a high-level orchestrator (e.g., an FSM-based controller) that tracks task progress and activates different models depending on the current state. This would make the system more modular and structured.
+To maintain stability and simplicity we have trained the model to perform all actions in one model. While this makes development and debugging easier, it does not scale well to longer or more complex task sequences. A more robust solution would include a high-level orchestrator (e.g., an FSM-based controller) that tracks task progress and activates different models depending on the current state. This would make the system more modular and structured.
 
 Another limitation is that training was based only on successful demonstrations. In real-world applications, failures are inevitable. A more reliable system should therefore include:
 
